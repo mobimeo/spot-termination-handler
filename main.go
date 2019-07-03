@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ecs"
 	"io/ioutil"
@@ -45,7 +44,9 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	svc := ecs.New(session.New(&aws.Config{}))
+	svc := ecs.New(session.Must(session.NewSessionWithOptions(session.Options{
+		SharedConfigState: session.SharedConfigEnable,
+	})))
 	status := "DRAINING"
 	state := &ecs.UpdateContainerInstancesStateInput{
 		Cluster:            &ecsMetadata.Cluster,
