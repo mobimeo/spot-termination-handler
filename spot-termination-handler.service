@@ -1,0 +1,9 @@
+[Unit]
+Description=Start spot instance termination handler monitoring script
+
+[Service]
+Restart=always
+ExecStart=/usr/local/bin/spot-instance-termination-handler
+
+[Install]
+WantedBy=multi-user.target
