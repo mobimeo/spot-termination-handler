@@ -1,8 +1,11 @@
-# spot-termination-handler
+# Spot Termination Handler
 
-Welcome to spot-termination-handler !
+Welcome to Spot Termination Handler !
 
-This is not an official Reach-Now product.
+Please note
+
+- This is not an official Reach-Now product.
+- This functionality has since been integrated into the official [ECS Agent](https://github.com/aws/amazon-ecs-agent/blob/master/CHANGELOG.md#1320) with [PR 2205](https://github.com/aws/amazon-ecs-agent/pull/2205).
 
 ---
 
